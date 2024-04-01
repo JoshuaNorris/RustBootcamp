@@ -12,4 +12,17 @@
 // * Use a match expression to determine which message
 //   to print
 
-fn main() {}
+fn main() {
+	big_or_small(50);
+	big_or_small(150);
+}
+
+
+fn big_or_small(num : i32) {
+	let result = match num {
+		n if n > 100 => "its big",
+		n if n <= 100 => "its small",
+		_ => "math doesn't make sense",
+	};
+	println!("{:?}", result);
+}
